@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/play.css">
+	<script type="text/javascript" src="script/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="script/easyBackground-min.js"></script>
+	<script type="text/javascript">
+	    $(document).ready(function() {
+			$('#bg-moble').easyBackground({
+			    wrapNeighbours: true
+			});
+	    });
+	</script>
+</head>
+<body>
+	<div id="bg-moble"></div>
+	<div class="play-modle-list">
+		<div class="list-content">
+			<div class="list">
+				<div class="list-wrappern">
+					<ul id="playlist">
+					</ul>
+				</div>
+			</div>
+			<div class="play-body" id="playMode">
+				<div class="cover">
+					<img src="file/cover/Drunk In Love.jpg" alt="">
+				</div>
+				<div class="tool-info">
+					<div class="tag">
+						<strong>Title</strong>
+						<span class="artist">Artist</span>
+						<span class="album">Album</span>
+					</div>
+					<div class="control">
+						<div class="left">
+							<div class="rewind icon"></div>
+							<div class="playback icon"></div>
+							<div class="fastforward icon"></div>
+						</div>
+						<div class="volume right">
+							<div class="mute icon left"></div>
+							<div class="slider left">
+								<div class="pace"></div>
+							</div>
+						</div>
+					</div>
+					<div class="progress">
+						<div class="slider">
+							<div class="loaded"></div>
+							<div class="pace"></div>
+						</div>
+						<div class="timer left">0:00</div>
+						<div class="right">
+							<div class="repeat icon"></div>
+							<div class="shuffle icon"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<script type="text/javascript"  src="script/jquery-ui-1.10.4.custom.min.js"></script>
+	<script type="text/javascript" src="script/shadyPlay.js"></script>
+</body>
+</html>

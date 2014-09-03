@@ -1,0 +1,356 @@
+/**
+@YuanYJ 
+**/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    background: #333;
+    color: #fff;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.play-modle-list{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	min-width: 900px;
+	overflow: auto;
+}
+
+.list-content{
+	width: 900px;
+	margin: 0 auto;
+	overflow-x:hidden; 
+	position: relative;
+}
+
+.list-content .list{
+	width: 285px;
+	margin: 159px 0 88px 32px;
+	_margin: 144px 0 88px 54px;
+	z-index: 28;
+}
+
+.list-wrappern{
+	width: 255px;
+	padding: 33px 28px;
+	min-height: 300px;
+}
+
+.list-wrappern li.list-info{
+	font-size: 13px;
+	width: 258px;
+	height: 38px;
+	line-height: 38px;
+	color: #fff;
+	margin-bottom: 5px;
+	position: relative;
+	cursor: pointer;
+	zoom: 1;
+    list-style: none;
+}
+
+.list-wrappern li.list-info .song-name{
+	display: inline-block;
+	zoom: 1;
+	width: 232px;
+	text-indent: 24px;
+	transition: background .2s linear;
+	-webkit-transition: background .2s linear;
+	-moz-transition: background .2s linear;
+	-o-transition: background .2s linear;
+	background: rgba(0,0,0,0.5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#50c6d3cd,endColorstr=#50c6d3cd);
+	_background: #c6d3cd;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-right: 15px;
+	white-space: nowrap;
+	_padding-right: 0;
+	_width: 220px;
+}
+
+
+.list-wrappern li.playing .icon-playing{
+	visibility: visible;
+	background: url("../images/playCurrent1a.gif") no-repeat;
+	width: 11px;
+	height: 11px;
+	display: inline-block;
+	position: absolute;
+	top: 13px;
+	right: 21px;
+}
+
+.play-body{
+	position: absolute;
+	right: 0;
+	top: 90px;
+	z-index: 1;
+	width: 500px;
+	height: 130px;
+	padding: 25px;
+	margin: 50px auto 30px;
+}
+
+.play-body .cover{
+	background: rgba(0, 0, 0, 0.5);
+	border: 1px solid #333;
+	overflow: hidden;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+	width: 150px;
+	height: 150px;
+	-moz-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	box-shadow: 0 0 20px rgba(0,0,0,0.2);
+	position: absolute;
+}
+
+
+.play-body .tool-info{
+	margin-left: 175px;
+	text-shadow: 0 1px 2px #000;
+	line-height: 16px;
+}
+
+.tool-info .tag strong{
+	display: block;
+	text-overflow: ellipsis
+}
+
+.tool-info .tag span{
+	font-size: 12px;
+	margin-top: 5px;
+	color: #ccc;
+}
+
+
+.tool-info .tag span {
+	display: block;
+	text-overflow: ellipsis;
+}
+
+
+.play-body .control {
+	margin-top: 10px;
+	height: 36px;
+}
+
+.left {
+	float: left;
+}
+
+
+.play-body .control .rewind {
+	background-image: url(../images/rewind.png);
+}
+
+.play-body .control .playback {
+	background-image: url(../images/play.png);
+}
+
+.play-body .control .playing {
+	background-image: url(../images/pause.png);
+}
+
+.play-body .control .fastforward {
+	background-image: url(../images/fastforward.png);
+}
+
+.volume .mute {
+	background-image: url(../images/volume.png);
+}
+
+.volume .mute.enable {
+	background-image: url(../images/mute.png);
+}
+
+.play-body .control .icon {
+	background-repeat: no-repeat;
+	background-position: center;
+	display: inline-block;
+	opacity: 0.6;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	-moz-transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.play-body .control .playback{
+	width: 32px;
+	height: 32px;
+	vertical-align: text-bottom;
+}
+
+.play-body .control .icon:hover{
+	opacity: 1;
+}
+
+.right {
+	float: right;
+}
+
+
+.play-body .control .volume .slider {
+	margin-top: 11px;
+	margin-left: 10px;
+	width: 100px;
+}
+
+
+.slider {
+	background: rgba(0, 0, 0, 0.3);
+	height: 5px;
+	position: relative;
+	cursor: pointer;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+	-o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset;
+}
+
+.pace {
+	background: #258fb8;
+}
+
+
+.play-body .control .slider .pace {
+	position: absolute;
+	height: 100%;
+	opacity: 0.7;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.slider a {
+	background: #fff;
+	margin-left: -2.5px;
+	position: absolute;
+	opacity: 0;
+	width: 5px;
+	height: 5px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-khtml-border-radius: 50%;
+	border-radius: 50%;
+	-moz-transition: opacity 0.3s;
+	-webkit-transition: opacity 0.3s;
+	-o-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+
+.play-body .progress {
+	margin-top: 10px;
+}
+
+.slider .loaded, .slider .pace {
+	position: absolute;
+	height: 100%;
+	opacity: 0.7;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.slider .loaded {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.slider .pace {
+	background: #258fb8;
+}
+
+.slider a {
+	background: #fff;	
+	margin-left: -2.5px;
+	position: absolute;
+	opacity: 0;
+	width: 5px;
+	height: 5px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-khtml-border-radius: 50%;
+	border-radius: 50%;
+	-moz-transition: opacity 0.3s;
+	-webkit-transition: opacity 0.3s;
+	-o-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.play-body .progress .timer {
+	font-size: 12px;
+	color: #ccc;
+	margin-top: 8px;
+}
+
+.play-body .progress .repeat {
+	background-image: url(../images/repeat.png);
+}
+
+.play-body .progress  .shuffle {
+	background-image: url(../images/shuffle.png);
+}
+
+.play-body .progress .repeat,
+.play-body .progress .shuffle{
+	background-position: center bottom;
+}
+
+
+.slider:hover a, .slider.enable a {
+  opacity: 1;
+}
